@@ -1,0 +1,20 @@
+{
+  "env": {
+    "node": true,
+    "es2021": true
+  },
+  "extends": ["eslint:recommended", "prettier"],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "rules": {
+    "indent": [1, "tab"],
+    "linebreak-style": [2, "unix"],
+    "quotes": [1, "double"],
+    "semi": [1, "always"],
+    "no-inner-declarations": "off",
+    "max-len": [1, { "code": 120 }]
+  }
+}
