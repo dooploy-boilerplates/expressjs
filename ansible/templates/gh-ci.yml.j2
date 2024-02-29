@@ -16,7 +16,7 @@ jobs:
           script: |
             eval "$(ssh-agent -s)"
             ssh-add ~/.ssh/{{ deployKeyFileName }}
-            cd {{ hostAppDirectory }} 
+            cd {{ hostDest }} 
             git checkout main
             git pull origin main
             docker stop {{ containerName }}
