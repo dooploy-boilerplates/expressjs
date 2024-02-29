@@ -15,7 +15,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME | default("{{ secrets.SSH_USERNAME }}") }} # User of the server you want to ssh into
           script: |
             eval "$(ssh-agent -s)"
-            ssh-add ~/.ssh/{{ deployKeyFilename }}
+            ssh-add ~/.ssh/{{ deployKeyFileName }}
             cd {{ hostAppDirectory }} 
             git checkout main
             git pull origin main
